@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,12 +62,53 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom earthy palette
+				earth: {
+					50: '#f9f7f4',
+					100: '#f0ebe3',
+					200: '#e6ddd1',
+					300: '#d4c5b0',
+					400: '#c2a688',
+					500: '#b08d66',
+					600: '#9a7650',
+					700: '#7d5f42',
+					800: '#684f37',
+					900: '#56422f'
+				},
+				forest: {
+					50: '#f4f6f3',
+					100: '#e6ebe4',
+					200: '#cdd7c9',
+					300: '#a8bca0',
+					400: '#7e9b70',
+					500: '#5d7c4f',
+					600: '#47613c',
+					700: '#3a4e31',
+					800: '#30402a',
+					900: '#293425'
+				},
+				sage: {
+					50: '#f6f7f4',
+					100: '#ebeee6',
+					200: '#d7ddce',
+					300: '#b8c5a8',
+					400: '#96a67f',
+					500: '#778960',
+					600: '#5e6d4a',
+					700: '#4b553c',
+					800: '#3e4732',
+					900: '#353c2c'
 				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			fontFamily: {
+				'serif': ['Playfair Display', 'serif'],
+				'sans': ['Inter', 'system-ui', 'sans-serif'],
 			},
 			keyframes: {
 				'accordion-down': {
@@ -84,11 +126,22 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					from: {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					to: {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out'
 			}
 		}
 	},
